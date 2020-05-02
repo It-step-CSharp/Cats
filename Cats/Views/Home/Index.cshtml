@@ -1,0 +1,25 @@
+﻿@model List<Cat>
+@{
+    ViewData["Title"] = "Cats";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var cat in Model)
+{
+    <div class="row">
+        <div class="col-md-4"><span>Name: </span>@cat.Name</div>
+
+        <div class="col-md-4"><span>Age: </span>@cat.Age</div>
+
+        <button onclick="edit('@cat.Id')" class="btn btn-danger">Edit</button>
+    </div>
+
+    <hr />
+}
+
+<script>
+    function edit(id) {
+        window.location = "Home/Edit/" + id
+    }
+</script>
