@@ -10,5 +10,9 @@ namespace Cats.Data
         Cat GetById(int id);
 
         void Edit(Cat cat);
+
+        void Add(string name, int age);
+
+        void Delete(int id);
     }
 }

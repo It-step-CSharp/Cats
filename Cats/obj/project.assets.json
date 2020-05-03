@@ -4920,11 +4920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\source\\repos\\Cats\\Cats\\Cats.csproj",
+      "projectUniqueName": "D:\\Prog\\C#\\Cats\\Cats\\Cats.csproj",
       "projectName": "Cats",
-      "projectPath": "C:\\Users\\Acer\\source\\repos\\Cats\\Cats\\Cats.csproj",
+      "projectPath": "D:\\Prog\\C#\\Cats\\Cats\\Cats.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\source\\repos\\Cats\\Cats\\obj\\",
+      "outputPath": "D:\\Prog\\C#\\Cats\\Cats\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

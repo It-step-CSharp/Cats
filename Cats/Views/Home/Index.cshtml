@@ -7,19 +7,54 @@
 
 @foreach (var cat in Model)
 {
-    <div class="row">
-        <div class="col-md-4"><span>Name: </span>@cat.Name</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"><span>Name: </span>@cat.Name</div>
 
-        <div class="col-md-4"><span>Age: </span>@cat.Age</div>
+            <div class="col-sm"><span>Age: </span>@cat.Age</div>
 
-        <button onclick="edit('@cat.Id')" class="btn btn-danger">Edit</button>
+            <div class="col-sm">
+                <button class="button" onclick="edit('@cat.Id')">
+                    <i class="fa fa-2x fa-edit"></i>
+                </button>
+            </div>
+
+            <div class="col-sm">
+                <button class="button" onclick="getCatToDelete('@cat.Name', @cat.Id)" type="button" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-2x fa-trash"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
     <hr />
 }
 
-<script>
-    function edit(id) {
-        window.location = "Home/Edit/" + id
-    }
-</script>
+<div class="add-button-wrapper">
+    <button class="button" onclick="handleAddCat()">
+        <i class="fa fa-2x fa-plus-square"></i>
+    </button>
+</div>
+<div class="add-form-wrapper invisible">
+    <form asp-controller="Home" asp-action="Add" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <input class="form-control" type="text" name="catName" placeholder="Add cat name.." />
+                </div>
+                <div class="com-sm">
+                    <input class="form-control" type="number" name="catAge" placeholder="Add cat age.." />
+                </div>
+                <div class="col-sm">
+                    <input class="btn btn-light" type="submit" value="Add cat" />
+                </div>
+                <div class="col-sm">
+                    <button type="button" onclick="cancelAdd()" class="btn btn-light">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<partial name="_DeleteCatPartial" />
+
+

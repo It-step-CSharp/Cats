@@ -6,17 +6,19 @@
 <h1>@ViewData["Title"]</h1>
 
 <form asp-controller="Home" asp-action="SaveEdit" method="post">
-    <div class="row">
+    <div class="row align-bottom">
         <div class="col-md-3">
-            <label asp-for="Name"></label>
-            <input class="form-control" asp-for="Name" />
+            <span>
+                <label asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" />
+            </span>
         </div>
         <div class="col-md-3">
             <label asp-for="Age"></label>
             <input class="form-control" asp-for="Age" />
         </div>
-        <input asp-for="Id" hidden/>
-        <input class="btn btn-primary" type="submit"  value="Save" />
     </div>
-   
+    <hr />
+    <input asp-for="Id" hidden />
+    <input class="btn btn-primary" type="submit" value="Save" />
 </form>

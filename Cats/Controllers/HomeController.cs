@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Cats.Models;
 using Cats.Data;
 using Cats.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cats.Controllers
 {
@@ -38,7 +34,28 @@ namespace Cats.Controllers
         [HttpPost]
         public IActionResult SaveEdit(Cat cat)
         {
-            catService.Edit(cat);
+            if (ModelState.IsValid)
+            {
+                catService.Edit(cat);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Add([Required, MinLength(1)]string catName, [Range(1, 100)]int catAge)
+        {
+            if (ModelState.IsValid)
+            {
+                catService.Add(catName, catAge);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            catService.Delete(id);
 
             return RedirectToAction("Index");
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HtLEnnBlD89J1aypf9a8+DcvXq94vR3biG6VeVKcfq9OXUo+i58cLazy8kPD05yr2Zqz+Is+pvCYbiMKpDgs6g==",
+  "dgSpecHash": "4YWBR//Dqntcm2MQEn+W26d0N0fSuFqItXnqXiILwE/ta485BWlnboTu4zRDJm3egr+tA7QMPacpD+4UMW3LBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\Cats\\Cats\\Cats.csproj",
+  "projectFilePath": "D:\\Prog\\C#\\Cats\\Cats\\Cats.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
